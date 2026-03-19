@@ -4,7 +4,7 @@ const socketIo = require('socket.io');
 const cors = require('cors');
 require('dotenv').config();
 
-const app = express();
+const app = express();app.use(express.static('.'));
 const server = http.createServer(app);
 const io = socketIo(server, { cors: { origin: "*" } });
 
